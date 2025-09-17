@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Special deals and featured items for our Facebook community at Baddie Thrift Store">
+    
+    <!-- Open Graph Meta Tags for Facebook -->
+    <meta property="og:title" content="Facebook Exclusive Deals - Baddie Thrift Store">
+    <meta property="og:description" content="Discover exclusive deals and featured vintage finds just for our Facebook community">
+    <meta property="og:image" content="./assets/images/facebook-exclusive-og.jpg">
+    <meta property="og:url" content="https://baddie-thrift.com/facebook-exclusive">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Baddie Thrift Store">
+    
+    <title>Facebook Exclusive Deals - Baddie Thrift Store</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Baddie</h1>
+                    <span class="logo-subtitle">Thrift Store</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="./index.html" class="nav-link">Home</a>
+                    <a href="#featured" class="nav-link">Featured</a>
+                    <a href="#exclusive-deals" class="nav-link">FB Exclusive</a>
+                    <a href="#sale" class="nav-link">Sale</a>
+                    <a href="./index.html#about" class="nav-link">About</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="#search" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="#cart" class="nav-icon"><i class="fas fa-shopping-bag"></i></a>
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Facebook Welcome Banner -->
+    <section class="social-landing" style="margin-top: 80px;">
+        <div class="container">
+            <div class="social-welcome">
+                <div class="social-icon-large">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <h1 class="social-landing-title">Welcome Facebook Baddies! 💙</h1>
+                <p class="social-landing-subtitle">Exclusive deals and early access just for our Facebook community</p>
+                <div class="social-badges">
+                    <div class="social-badge">
+                        <i class="fas fa-percent"></i>
+                        <span>20% Extra Off</span>
+                    </div>
+                    <div class="social-badge">
+                        <i class="fas fa-clock"></i>
+                        <span>Early Access</span>
+                    </div>
+                    <div class="social-badge">
+                        <i class="fas fa-heart"></i>
+                        <span>Facebook Love</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facebook Exclusive Deals -->
+    <section id="exclusive-deals" class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Facebook Exclusive Deals</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">
+                Special prices only available to our Facebook community - use code <strong style="color: var(--primary-pink);">FACEBOOK20</strong> for an extra 20% off!
+            </p>
+            <div class="products-grid" id="facebook-exclusive-products">
+                <!-- Products will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Engagement Section -->
+    <section class="community-section" style="background: var(--light-gray); padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title">Join Our Facebook Community</h2>
+            <div class="community-grid">
+                <div class="community-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Exclusive Group Access</h3>
+                    <p>Join our private Facebook group for first dibs on new arrivals and member-only sales</p>
+                    <a href="#" class="btn btn-primary">Join Group</a>
+                </div>
+                <div class="community-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Share Your Finds</h3>
+                    <p>Tag us in your thrift finds and styling posts for a chance to be featured on our page</p>
+                    <a href="#" class="btn btn-secondary">Follow Us</a>
+                </div>
+                <div class="community-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Weekly Giveaways</h3>
+                    <p>Participate in our Facebook-exclusive weekly giveaways and win amazing vintage pieces</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Back Section -->
+    <section class="share-back-section" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title">Found Something Amazing?</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+                Share your finds with your Facebook friends and spread the sustainable fashion love!
+            </p>
+            <div class="share-options">
+                <button class="btn btn-primary" onclick="sharePageOnFacebook()">
+                    <i class="fab fa-facebook-f"></i>
+                    Share This Page
+                </button>
+                <button class="btn btn-secondary" onclick="inviteFriends()">
+                    <i class="fas fa-user-friends"></i>
+                    Invite Friends
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" style="background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink)); padding: 60px 0; color: white; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 1rem;">Stay in the Loop</h2>
+            <p style="margin-bottom: 2rem; opacity: 0.9;">Get notified about Facebook-exclusive deals and new arrivals</p>
+            <form class="newsletter-form" style="max-width: 400px; margin: 0 auto;">
+                <input type="email" placeholder="Enter your email" required style="border: none;">
+                <button type="submit" class="btn" style="background: var(--accent-gold); color: var(--text-primary);">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Baddie Thrift Store</h3>
+                    <p>Sustainable fashion for the modern baddie</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" style="background: #1877F2;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Facebook Exclusive</h4>
+                    <ul>
+                        <li><a href="#exclusive-deals">Exclusive Deals</a></li>
+                        <li><a href="#">Facebook Group</a></li>
+                        <li><a href="#">Weekly Giveaways</a></li>
+                        <li><a href="#">Community Rules</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./index.html#products">All Products</a></li>
+                        <li><a href="./index.html#sale">Sale</a></li>
+                        <li><a href="./index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#size-guide">Size Guide</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Baddie Thrift Store. All rights reserved. Facebook Exclusive Page.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/social-integration.js"></script>
+    
+    <!-- Facebook-specific script -->
+    <script>
+        // Load Facebook exclusive products
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFacebookExclusiveProducts();
+            trackFacebookLandingPage();
+        });
+
+        function loadFacebookExclusiveProducts() {
+            // Simulate Facebook exclusive products with better prices
+            const facebookProducts = [
+                {
+                    id: 'fb1',
+                    title: "Vintage 90s Windbreaker",
+                    description: "Facebook exclusive - Retro windbreaker in perfect condition",
+                    price: 32.00,
+                    originalPrice: 65.00,
+                    category: "tops",
+                    featured: true,
+                    sale: true,
+                    image: "placeholder",
+                    condition: "Excellent",
+                    exclusive: "facebook"
+                },
+                {
+                    id: 'fb2',
+                    title: "Designer Vintage Skirt",
+                    description: "Facebook members only - Authentic designer mini skirt",
+                    price: 28.00,
+                    originalPrice: 85.00,
+                    category: "bottoms",
+                    featured: true,
+                    sale: true,
+                    image: "placeholder",
+                    condition: "Like New",
+                    exclusive: "facebook"
+                },
+                {
+                    id: 'fb3',
+                    title: "Statement Necklace Set",
+                    description: "Facebook community special - Bold statement jewelry set",
+                    price: 18.00,
+                    originalPrice: 45.00,
+                    category: "accessories",
+                    featured: true,
+                    sale: true,
+                    image: "placeholder",
+                    condition: "Excellent",
+                    exclusive: "facebook"
+                }
+            ];
+
+            const container = document.getElementById('facebook-exclusive-products');
+            if (container) {
+                container.innerHTML = facebookProducts.map(product => createFacebookProductCard(product)).join('');
+            }
+        }
+
+        function createFacebookProductCard(product) {
+            const discountPercentage = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+            
+            return `
+                <div class="product-card" data-product-id="${product.id}">
+                    <div class="product-image">
+                        <i class="fas fa-tshirt"></i>
+                        <span class="product-badge" style="background: #1877F2;">FB Exclusive</span>
+                        <span class="product-badge sale" style="top: 50px;">-${discountPercentage}%</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.title}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-price">
+                            <span class="price-current">$${product.price.toFixed(2)}</span>
+                            <span class="price-original">$${product.originalPrice.toFixed(2)}</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary btn-small" onclick="viewFacebookProduct('${product.id}')">
+                                View Details
+                            </button>
+                            <button class="btn btn-outline btn-small" onclick="addToCart('${product.id}')">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <div class="social-share">
+                            <span class="social-share-label">Share:</span>
+                            <button class="share-btn share-btn-facebook" onclick="shareProductOnFacebook('${product.id}')">
+                                <i class="fab fa-facebook-f"></i>
+                                Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function sharePageOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const quote = encodeURIComponent("Check out these amazing Facebook exclusive deals at Baddie Thrift Store! 💙✨ #BaddieThrift #FacebookExclusive");
+            const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`;
+            window.open(shareUrl, 'facebook-share', 'width=600,height=400');
+            
+            // Track the share
+            if (window.socialIntegration) {
+                window.socialIntegration.trackSocialEvent('facebook_page_share', {
+                    page: 'facebook_exclusive'
+                });
+            }
+        }
+
+        function inviteFriends() {
+            // In a real implementation, this would use Facebook SDK to invite friends
+            alert('Invite friends feature would be implemented with Facebook SDK in production!');
+            
+            if (window.socialIntegration) {
+                window.socialIntegration.trackSocialEvent('facebook_invite_attempt', {
+                    page: 'facebook_exclusive'
+                });
+            }
+        }
+
+        function trackFacebookLandingPage() {
+            // Track that user landed on Facebook exclusive page
+            if (window.socialIntegration) {
+                window.socialIntegration.trackSocialEvent('facebook_exclusive_landing', {
+                    referrer: document.referrer,
+                    timestamp: Date.now()
+                });
+            }
+
+            // Facebook Pixel tracking
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_type: 'landing_page',
+                    content_name: 'facebook_exclusive'
+                });
+            }
+        }
+
+        // Mobile nav functionality
+        document.getElementById('nav-toggle')?.addEventListener('click', () => {
+            const navMenu = document.getElementById('nav-menu');
+            const navToggle = document.getElementById('nav-toggle');
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    </script>
+
+    <!-- Additional Facebook Page Styles -->
+    <style>
+        .social-welcome {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-icon-large {
+            width: 80px;
+            height: 80px;
+            background: #1877F2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .social-icon-large i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .social-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .community-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+        }
+
+        .community-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .community-card i {
+            font-size: 3rem;
+            color: #1877F2;
+            margin-bottom: 1rem;
+        }
+
+        .community-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .community-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .share-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .social-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .share-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .share-options .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+
+    <!-- Meta Pixel Code (Facebook) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+</body>
+</html>
