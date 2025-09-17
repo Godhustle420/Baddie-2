@@ -1,0 +1,16 @@
+# Railway Configuration for Backend API
+# This file configures deployment to Railway for backend services
+
+[build]
+  builder = "NIXPACKS"
+
+[deploy]
+  startCommand = "npm start"
+  restartPolicyType = "ON_FAILURE"
+  restartPolicyMaxRetries = 10
+
+[env]
+  NODE_ENV = "production"
+
+# Railway will automatically detect this as a Node.js app
+# and build using npm install && npm run build
