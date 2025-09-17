@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Dynamic Meta Tags - Updated by JavaScript -->
+    <meta name="description" content="Product details at Baddie Thrift Store">
+    <meta property="og:title" content="Product - Baddie Thrift Store">
+    <meta property="og:description" content="Amazing thrift find at Baddie Thrift Store">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="Baddie Thrift Store">
+    
+    <!-- Product-specific meta tags -->
+    <meta property="product:price:amount" content="">
+    <meta property="product:price:currency" content="USD">
+    <meta property="product:availability" content="in stock">
+    <meta property="product:condition" content="">
+    <meta property="product:brand" content="Baddie Thrift Store">
+    
+    <title>Product Details - Baddie Thrift Store</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Baddie</h1>
+                    <span class="logo-subtitle">Thrift Store</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="./index.html" class="nav-link">Home</a>
+                    <a href="./index.html#featured" class="nav-link">Featured</a>
+                    <a href="./index.html#products" class="nav-link">Products</a>
+                    <a href="./index.html#sale" class="nav-link">Sale</a>
+                    <a href="./index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-icons">
+                    <a href="#search" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="#cart" class="nav-icon"><i class="fas fa-shopping-bag"></i></a>
+                    <div class="nav-toggle" id="nav-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section" style="margin-top: 100px; padding: 40px 0;">
+        <div class="container">
+            <div class="product-detail-grid">
+                <!-- Product Images -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                            <p>Product Image</p>
+                        </div>
+                    </div>
+                    <div class="image-thumbnails">
+                        <div class="thumbnail active">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="thumbnail">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="thumbnail">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Information -->
+                <div class="product-info-detail">
+                    <div class="breadcrumb">
+                        <a href="./index.html">Home</a>
+                        <span>/</span>
+                        <a href="./index.html#products">Products</a>
+                        <span>/</span>
+                        <span id="product-category">Category</span>
+                    </div>
+
+                    <h1 class="product-title-large" id="product-title">Product Title</h1>
+                    
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-text">(4.8/5.0 - 24 reviews)</span>
+                    </div>
+
+                    <div class="product-price-large">
+                        <span class="price-current-large" id="product-price">$0.00</span>
+                        <span class="price-original-large" id="product-original-price"></span>
+                        <span class="discount-badge" id="discount-badge"></span>
+                    </div>
+
+                    <div class="product-condition">
+                        <strong>Condition:</strong> <span id="product-condition">Excellent</span>
+                    </div>
+
+                    <div class="product-description-full">
+                        <h3>Description</h3>
+                        <p id="product-description">Product description will be loaded here.</p>
+                    </div>
+
+                    <div class="product-details">
+                        <h3>Details</h3>
+                        <ul>
+                            <li><strong>Category:</strong> <span id="detail-category">Category</span></li>
+                            <li><strong>Size:</strong> <span id="detail-size">Medium</span></li>
+                            <li><strong>Material:</strong> <span id="detail-material">Cotton Blend</span></li>
+                            <li><strong>Era:</strong> <span id="detail-era">1990s</span></li>
+                            <li><strong>Measurements:</strong> <span id="detail-measurements">See size guide</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="product-actions-large">
+                        <div class="quantity-selector">
+                            <label for="quantity">Quantity:</label>
+                            <select id="quantity" name="quantity">
+                                <option value="1" selected>1</option>
+                            </select>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn btn-primary btn-large" id="add-to-cart-btn">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Cart
+                            </button>
+                            <button class="btn btn-secondary btn-large" id="buy-now-btn">
+                                <i class="fas fa-bolt"></i>
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Social Sharing -->
+                    <div class="social-sharing-enhanced">
+                        <h3>Share This Find</h3>
+                        <div class="share-buttons-large">
+                            <button class="share-btn-large share-btn-facebook" id="share-facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Share on Facebook</span>
+                                <small>Perfect for your feed</small>
+                            </button>
+                            <button class="share-btn-large share-btn-tiktok" id="share-tiktok">
+                                <i class="fab fa-tiktok"></i>
+                                <span>Share on TikTok</span>
+                                <small>Ready for your video</small>
+                            </button>
+                            <button class="share-btn-large share-btn-copy" id="share-copy">
+                                <i class="fas fa-link"></i>
+                                <span>Copy Link</span>
+                                <small>Share anywhere</small>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products" style="padding: 80px 0; background: var(--light-gray);">
+        <div class="container">
+            <h2 class="section-title">You Might Also Like</h2>
+            <div class="products-grid" id="related-products">
+                <!-- Related products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Baddie Thrift Store</h3>
+                    <p>Sustainable fashion for the modern baddie</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./index.html#featured">Featured</a></li>
+                        <li><a href="./index.html#products">Products</a></li>
+                        <li><a href="./index.html#sale">Sale</a></li>
+                        <li><a href="./index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#size-guide">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <p>Stay connected for the latest finds</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Baddie Thrift Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/social-integration.js"></script>
+    
+    <script>
+        // Product Detail Page Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProductDetails();
+            setupProductActions();
+        });
+
+        function loadProductDetails() {
+            // Get product ID from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id') || '1';
+            
+            // In a real application, this would fetch from an API
+            // For demo purposes, we'll use sample data
+            const sampleProduct = {
+                id: productId,
+                title: "Vintage 90s Denim Jacket",
+                description: "This amazing vintage denim jacket is a true 90s gem! Features classic stonewash finish, oversized fit perfect for layering, and authentic vintage details that make it one-of-a-kind. The jacket has been carefully curated and is in excellent condition with minimal signs of wear that only add to its authentic vintage charm.",
+                price: 45.00,
+                originalPrice: 85.00,
+                category: "Tops",
+                condition: "Excellent",
+                size: "Large",
+                material: "100% Cotton Denim",
+                era: "1990s",
+                measurements: "Chest: 44\", Length: 26\", Sleeve: 23\""
+            };
+
+            // Update page content
+            updateProductDisplay(sampleProduct);
+            updateMetaTags(sampleProduct);
+            loadRelatedProducts();
+        }
+
+        function updateProductDisplay(product) {
+            document.getElementById('product-title').textContent = product.title;
+            document.getElementById('product-price').textContent = `$${product.price.toFixed(2)}`;
+            document.getElementById('product-description').textContent = product.description;
+            document.getElementById('product-condition').textContent = product.condition;
+            document.getElementById('product-category').textContent = product.category;
+            
+            // Update details
+            document.getElementById('detail-category').textContent = product.category;
+            document.getElementById('detail-size').textContent = product.size;
+            document.getElementById('detail-material').textContent = product.material;
+            document.getElementById('detail-era').textContent = product.era;
+            document.getElementById('detail-measurements').textContent = product.measurements;
+
+            if (product.originalPrice) {
+                const originalPriceEl = document.getElementById('product-original-price');
+                originalPriceEl.textContent = `$${product.originalPrice.toFixed(2)}`;
+                originalPriceEl.style.display = 'inline';
+                
+                const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+                const discountBadge = document.getElementById('discount-badge');
+                discountBadge.textContent = `-${discount}%`;
+                discountBadge.style.display = 'inline';
+            }
+
+            // Update page title
+            document.title = `${product.title} - Baddie Thrift Store`;
+        }
+
+        function updateMetaTags(product) {
+            if (window.socialIntegration) {
+                window.socialIntegration.updateMetaTags(product);
+            }
+        }
+
+        function setupProductActions() {
+            // Add to cart functionality
+            document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+                // Track add to cart event
+                if (window.app) {
+                    window.app.trackEvent('AddToCart', {
+                        product_id: getProductId(),
+                        product_name: document.getElementById('product-title').textContent,
+                        price: parseFloat(document.getElementById('product-price').textContent.replace('$', '')),
+                        category: document.getElementById('product-category').textContent
+                    });
+                }
+                
+                showNotification('Product added to cart!', 'success');
+            });
+
+            // Buy now functionality
+            document.getElementById('buy-now-btn').addEventListener('click', () => {
+                // Track buy now event
+                if (window.app) {
+                    window.app.trackEvent('InitiateCheckout', {
+                        product_id: getProductId(),
+                        product_name: document.getElementById('product-title').textContent,
+                        price: parseFloat(document.getElementById('product-price').textContent.replace('$', ''))
+                    });
+                }
+                
+                showNotification('Redirecting to checkout...', 'info');
+            });
+
+            // Social sharing
+            document.getElementById('share-facebook').addEventListener('click', () => {
+                shareOnFacebook();
+            });
+
+            document.getElementById('share-tiktok').addEventListener('click', () => {
+                shareOnTikTok();
+            });
+
+            document.getElementById('share-copy').addEventListener('click', () => {
+                copyProductLink();
+            });
+        }
+
+        function shareOnFacebook() {
+            const product = getCurrentProduct();
+            if (window.socialIntegration) {
+                window.socialIntegration.shareProductOnFacebook(product);
+            }
+        }
+
+        function shareOnTikTok() {
+            const product = getCurrentProduct();
+            if (window.socialIntegration) {
+                window.socialIntegration.shareProductOnTikTok(product);
+            }
+        }
+
+        function copyProductLink() {
+            const url = window.location.href;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    showNotification('Product link copied to clipboard!', 'success');
+                });
+            } else {
+                showNotification('Link: ' + url, 'info');
+            }
+        }
+
+        function getCurrentProduct() {
+            return {
+                id: getProductId(),
+                title: document.getElementById('product-title').textContent,
+                description: document.getElementById('product-description').textContent,
+                price: parseFloat(document.getElementById('product-price').textContent.replace('$', '')),
+                category: document.getElementById('product-category').textContent.toLowerCase(),
+                condition: document.getElementById('product-condition').textContent
+            };
+        }
+
+        function getProductId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id') || '1';
+        }
+
+        function loadRelatedProducts() {
+            // Load related products (simplified for demo)
+            const relatedContainer = document.getElementById('related-products');
+            if (relatedContainer && window.app) {
+                // Get random products from the main app
+                const randomProducts = window.app.products
+                    .sort(() => 0.5 - Math.random())
+                    .slice(0, 3);
+                
+                relatedContainer.innerHTML = randomProducts
+                    .map(product => window.app.createProductCard(product))
+                    .join('');
+            }
+        }
+
+        function showNotification(message, type = 'info') {
+            if (window.app) {
+                window.app.showNotification(message, type);
+            }
+        }
+
+        // Mobile nav functionality
+        document.getElementById('nav-toggle')?.addEventListener('click', () => {
+            const navMenu = document.getElementById('nav-menu');
+            const navToggle = document.getElementById('nav-toggle');
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+    </script>
+
+    <!-- Product Detail Specific Styles -->
+    <style>
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .product-images {
+            position: sticky;
+            top: 100px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 500px;
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .image-placeholder {
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .image-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-pink);
+        }
+
+        .image-thumbnails {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .thumbnail.active {
+            border-color: var(--primary-pink);
+        }
+
+        .thumbnail:hover {
+            border-color: var(--primary-pink);
+        }
+
+        .thumbnail i {
+            color: var(--text-light);
+        }
+
+        .breadcrumb {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-pink);
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--dark-pink);
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+        }
+
+        .product-title-large {
+            font-family: var(--font-primary);
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            color: var(--accent-gold);
+        }
+
+        .rating-text {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .product-price-large {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-current-large {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-pink);
+        }
+
+        .price-original-large {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            text-decoration: line-through;
+            display: none;
+        }
+
+        .discount-badge {
+            background: var(--accent-gold);
+            color: var(--text-primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: none;
+        }
+
+        .product-condition {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+            font-weight: 500;
+        }
+
+        .product-description-full,
+        .product-details {
+            margin-bottom: 2rem;
+        }
+
+        .product-description-full h3,
+        .product-details h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+        }
+
+        .product-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-details li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .product-details li:last-child {
+            border-bottom: none;
+        }
+
+        .product-actions-large {
+            margin-bottom: 3rem;
+        }
+
+        .quantity-selector {
+            margin-bottom: 1rem;
+        }
+
+        .quantity-selector label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .quantity-selector select {
+            padding: 10px;
+            border: 2px solid var(--border-light);
+            border-radius: var(--border-radius);
+            font-family: var(--font-secondary);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-large {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            flex: 1;
+        }
+
+        .social-sharing-enhanced h3 {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+        }
+
+        .share-buttons-large {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .share-btn-large {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid var(--border-light);
+            background: white;
+            text-align: left;
+        }
+
+        .share-btn-large:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .share-btn-large i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 30px;
+        }
+
+        .share-btn-large span {
+            font-weight: 600;
+            display: block;
+        }
+
+        .share-btn-large small {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        .share-btn-facebook {
+            border-color: #1877F2;
+        }
+
+        .share-btn-facebook i {
+            color: #1877F2;
+        }
+
+        .share-btn-tiktok {
+            border-color: #000000;
+        }
+
+        .share-btn-tiktok i {
+            color: #000000;
+        }
+
+        .share-btn-copy {
+            border-color: var(--primary-pink);
+        }
+
+        .share-btn-copy i {
+            color: var(--primary-pink);
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-images {
+                position: static;
+            }
+
+            .product-title-large {
+                font-size: 2rem;
+            }
+
+            .price-current-large {
+                font-size: 1.5rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .share-buttons-large {
+                gap: 0.5rem;
+            }
+
+            .share-btn-large {
+                padding: 0.8rem;
+            }
+        }
+    </style>
+
+    <!-- Meta Pixel Code (Facebook) -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <!-- TikTok Pixel Code -->
+    <script>
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+            ttq.load('YOUR_TIKTOK_PIXEL_ID');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+</body>
+</html>
